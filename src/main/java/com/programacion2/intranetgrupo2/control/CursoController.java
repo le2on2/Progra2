@@ -50,8 +50,6 @@ public class CursoController {
 		return  "result";
 	}
 	
-	
-	
 	@GetMapping(value = "/curso/{codigo}/edit")
 	public String editCurso(@PathVariable("codigo") long id,Model model) {
 		Curso curso  =CurRepo.findOne(id);
