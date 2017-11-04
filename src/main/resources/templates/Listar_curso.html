@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8"/> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+        <link href="css/bootstrap.min.css" rel="stylesheet"/> 
+    </head>
+    <body>
+        
+  
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    
+                    <h2>Cursos</h2>
+                    
+                    <div class="panel  panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Listar cursos</div>
+                        <div class="panel-body">
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="agregarCurso"><button class="btn btn-primary"> Agregar Curso </button></a>
+
+                                </div>
+                            </div>
+                            
+                            <table class="table">
+                                <thead class="thead-inverse">
+                                    <tr>
+                                        <th>Codigo</th>
+                                        <th>Carrera</th>
+                                        <th>Nombre</th>
+                                        <th>Area Curricular</th>
+                                        <th>Ciclo</th>
+                                        <th>Codigo Requisito</th>
+                                        <th>Estado</th>
+                                        <th>Accion</th>
+                                        <th>Accion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <br> </br>                              
+                                    <tr th:each="curso : ${curso}">
+                                        <th th:text="${curso.codigo}"></th>
+                                        <td th:text="${curso.carrera}"></td>
+                                        <td th:text="${curso.nombre}"></td>
+                                        <td th:text="${curso.area_curricular}"></td>
+                                        <td th:text="${curso.ciclo}"></td>
+                                        <td th:text="${curso.cod_requisito}"></td>
+                                        <td th:text="${curso.estado}"></td>
+                                        <td> <a th:href="@{'/curso/__${curso.codigo}__/edit'}" >Actualizar</a></td>
+                                        <td> <a th:href="@{'/curso/__${curso.codigo}__/eliminar'}">Eliminar</a></td>
+                                    </tr>
+                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
