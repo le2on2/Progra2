@@ -41,9 +41,11 @@
                                         <th>Accion</th>
                                     </tr>
                                 </thead>
+                                
                                 <tbody>
-                                <br> </br>                              
+                                                        
                                     <tr th:each="curso : ${curso}">
+                                    
                                         <th th:text="${curso.codigo}"></th>
                                         <td th:text="${curso.carrera}"></td>
                                         <td th:text="${curso.nombre}"></td>

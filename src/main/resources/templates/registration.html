@@ -15,16 +15,17 @@
 				<form autocomplete="off" action="#" th:action="@{/registration}"
 					th:object="${user}" method="post" class="form-horizontal"
 					role="form">
+					
 					<h2>Registration Form</h2>
-					<input type="text" id="username" name="username"  th:placeholder="username"
+					<input type="text" id="email" name="email"  th:placeholder="email"
 						class="form-control" /> <br/> 
 					<input type="password"  th:placeholder="Password"
 						id="password" name="password" class="form-control" /> <br /> 
-				</form>
-				<form th:action="@{/registration}" method="post">
+				
+			
 				<button class="btn btn-md btn-warning btn-block" type="Submit">Registrarse</button>
-				</form>	
-				<form th:action="@{/}" method="get">
+				
+				
 				<button class="btn btn-md btn-warning btn-block" type="Submit">Go To Login Page</button>
 				</form>	
 			</div>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/estilos.css" rel="stylesheet"/>
+        <script src="js/validar_alumno.js"></script> 
+    </head>
+    <body>
+        
+  
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    
+                    <h2>Agregar Alumno</h2>
+                    
+                    <div class="panel  panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Alumno</div>
+                        <div class="panel-body">
+                            
+                            
+                            <form name="form" action="Agregar_alumno.html" method="POST" onsubmit="return validar();">
+                                <div class="row">
+                                <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>IdAlumno</label>
+                                    <input style ="hidden"type="number" class="form-control" name="idalumno" id="idalumno"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Dni</label>
+                                    <input type="number" class="form-control" name="dni" id="dni"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input type="text" class="form-control" name="nombre" id="nombre"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Apellido</label>
+                                    <input type="text" class="form-control" name="apellido" id="apellido"/>
+                                </div>
+                                
+                                
+                                </div>
+                                <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Teléfono</label>
+                                    <input type="number" class="form-control" name="telefono" id="telefono"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" name="email" id="email"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Fecha Nacimiento</label>
+                                    <input type="text" class="form-control" name="fechanacimiento" id="fechanacimiento"/>
+                                </div>
+                                
+                                </div>
+                                </div>
+                                
+                               <button type="submit" class="btn btn-primary "> Agregar</button>
+                            </form>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

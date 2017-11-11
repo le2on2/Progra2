@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "user")
+@Table(name = "usuario")
 public class User implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -19,8 +19,8 @@ public class User implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column (name="id")
 	private Long id;
-	@Column(name = "username")
-	private String username;
+	@Column(name = "email")
+	private String email;
 	@Column(name = "password")
 	private String password;
 	public User(){
@@ -29,7 +29,7 @@ public class User implements Serializable{
 	
 	public User(User user) {
 	        this.id = user.id;
-	        this.username = user.username;       
+	        this.email = user.email;       
 	        this.password = user.password;       
 }
 
@@ -41,12 +41,12 @@ public class User implements Serializable{
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {

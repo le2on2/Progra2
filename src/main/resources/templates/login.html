@@ -12,23 +12,60 @@
 
 <body>
 	<div class="container">
-			<h3 class="form-signin-heading" th:text="Welcome"></h3>
 			<br/>
+			<h3 class="form-signin-heading" th:text="Welcome" align="center"></h3>
+			<br/>
+			<br/>
+			
 		<form th:action="@{/login}" method="POST" class="form-signin"> 
-			<input type="text" id="username" name="username"  th:placeholder="username"
-				class="form-control" /> <br/> 
-			<input type="password"  th:placeholder="Password"
-				id="password" name="password" class="form-control" /> <br /> 
-				
+		
+		<div class ="col-xl-12" align ="center">
+		<table style ="width: 400px;">
+		<tr>
+			<th>
+			
+			<input type="text" id="email" name="email"  th:placeholder="Email"
+						class="form-control" /> 
+				<br />
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<input type="password"  th:placeholder="Password"
+				id="password" name="password" class="form-control" />
+				<br />
+			</th>
+		</tr>	
+		<tr>
+			<th>
 			<div align="center" th:if="${param.error}">
 				<p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" th:text="Login"></button>
-		</form>
-		<form th:action="@{/registration}" method="get">
-		<button class="btn btn-md btn-warning btn-block" type="Submit">Go To Registration Page</button>
-		</form>	
+				<br />
+			</th>
+		</tr>
 		
-	</div>
+		</table>
+		</div>
+			<br/>
+			</form>
+		
+			<form th:action="@{/registration}" method="get">
+				<div class ="col-xl-12" align="center">
+					<table style ="width: 400px;">
+					<tr>
+						<td>
+							<button class="btn btn-md btn-warning btn-block" type="Submit" >Go To Registration Page</button>
+						</td>
+					</tr>
+					</table>
+				</div>
+					
+			</form>	
+		
+		</div>
+		
+	
 </body>
 </html>

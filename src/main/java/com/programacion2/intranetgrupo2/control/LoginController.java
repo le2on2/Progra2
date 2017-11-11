@@ -12,24 +12,24 @@ import com.programacion2.intranetgrupo2.repository.UserRepository;
 
 
 @Controller
-public class RegistrationController {
+public class LoginController {
 
-	@Autowired 
-	private UserRepository userRepository;
-	
-	
-	@GetMapping("/registration")
-	public String home() {
-		return "registration";
-	}
-	@PostMapping("/registration")
-	public String Registrar(@ModelAttribute User email, Model model) {
-		model.addAttribute("email",email);
-		userRepository.save(email);
-		return "login";
-	}
+@Autowired
+private UserRepository userRepository;
+
+@GetMapping("/")
+public String home1() {
+	return "login";
 }
 
+@PostMapping("/login")
+public String Login(String email, String password) {
 
-
-
+	User user = userRepository.findByemailAndPassword(email, password);
+	
+	if(user == null) {
+		return "login";
+	}
+	return "result";
+}
+}

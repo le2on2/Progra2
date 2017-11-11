@@ -6,6 +6,8 @@ import com.programacion2.intranetgrupo2.model.User;
 
 public interface UserRepository extends CrudRepository<User, Long> {
 
-	public User findByusername(String username);
+	public User findByemail(String email);
+	
+	User findByemailAndPassword(String email, String password);
 	
 }
